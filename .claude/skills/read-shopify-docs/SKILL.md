@@ -1,0 +1,1 @@
+read shopify docs using shopify-dev-mcp. 

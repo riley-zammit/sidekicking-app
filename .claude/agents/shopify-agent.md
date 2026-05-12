@@ -1,0 +1,1 @@
+skills: Use the read-shopify-docs skill to answer the user's query about the Shopify API or integrating with Shopify.
