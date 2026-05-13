@@ -2,6 +2,7 @@
   "name": "sidekicking",
   "private": true,
   "scripts": {
+    "migrate": "pnpm exec prisma migrate dev",
     "build": "react-router build",
     "dev": "shopify app dev",
     "config:link": "shopify app config link",
@@ -24,7 +25,7 @@
     "node": ">=20.19 <22 || >=22.12"
   },
   "dependencies": {
-    "@prisma/client": "^6.16.3",
+    "@prisma/adapter-better-sqlite3": "^7.8.0",
     "@react-router/dev": "^7.12.0",
     "@react-router/fs-routes": "^7.12.0",
     "@react-router/node": "^7.12.0",
@@ -33,14 +34,15 @@
     "@shopify/cli": "^3.93.1",
     "@shopify/shopify-app-react-router": "^1.1.0",
     "@shopify/shopify-app-session-storage-prisma": "^8.0.0",
+    "better-sqlite3": "^12.9.0",
     "isbot": "^5.1.31",
-    "prisma": "^6.16.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^7.12.0",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
+    "@prisma/client": "^7.8.0",
     "@shopify/api-codegen-preset": "^1.2.0",
     "@shopify/polaris-types": "^1.0.1",
     "@types/eslint": "^9.6.1",
@@ -57,6 +59,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "graphql-config": "^5.1.1",
     "prettier": "^3.6.2",
+    "prisma": "^7.8.0",
     "typescript": "^5.9.3",
     "vite": "^6.3.6"
   },
@@ -68,6 +71,11 @@
   ],
   "overrides": {
     "p-map": "^4.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
   },
   "author": "rileyzammit"
 }
